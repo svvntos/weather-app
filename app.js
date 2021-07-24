@@ -18,7 +18,12 @@ let weather = {
         document.querySelector(".humidity").innerHTML = "Humidity: " + humidity + "%";
         document.querySelector(".temp").innerHTML = temp + "°F";
         document.querySelector(".wind").innerHTML = "Wind Speed: " + speed + " mph";
-        
-
+    },
+    search: function() {
+        this.fetchWeather(document.querySelector(".search-bar").value);
     }
 };
+
+document.querySelector('.search button').addEventListener('click' || 'touchstart', function () {
+    weather.search();
+})

@@ -10,6 +10,15 @@ let weather = {
         const { icon, description} = data.weather[0];
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
-        console.log(name,icon,description,temp,humidity,speed)
+        console.log(name,icon,description,temp,humidity,speed);
+        document.querySelector(".city").innerHTML = "Weather in " + name;
+        document.querySelector(".icon").src = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+        document.querySelector(".description").innerHTML = description;
+        document.querySelector(".temp").innerHTML = temp + "°F";
+        document.querySelector(".humidity").innerHTML = "Humidity: " + humidity + "%";
+        document.querySelector(".temp").innerHTML = temp + "°F";
+        document.querySelector(".wind").innerHTML = "Wind Speed: " + speed + " mph";
+        
+
     }
 };
